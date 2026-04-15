@@ -140,6 +140,9 @@ guide-app은 clone을 fork해서 가이드 시스템을 얹은 것.
 > ⚠️ clone의 Sidebar.tsx / globals.css / layout.tsx를 그대로 복사하면 가이드 기능 깨짐
 > (guide-app Sidebar에는 GuideToggleButton 있음, layout에는 GuidePanelLayout 있음)
 
+> ⚠️ clone의 `src/app/styles/theme_*.css`는 `var(--color-w-gray-*)` 토큰 시스템에 의존
+> guide-app에 해당 토큰이 없으므로 import해도 작동 안 함 → **복사 불필요, guide-app 자체 CSS vars 유지**
+
 clone 구현 현황: `.claude/CLONE_STATUS.md` 참조
 
 ---
